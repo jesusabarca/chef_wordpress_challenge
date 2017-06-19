@@ -14,6 +14,10 @@ MYSQL_CREDS = {
   }
 }.freeze
 
+bash 'update_apt-get' do
+  code 'apt-get update'
+end
+
 bash 'set_insecure_mysql_password' do
   code <<-BASH
     echo 'mysql-server mysql-server/root_password password #{MYSQL_CREDS[:root][:pwd]}' | sudo debconf-set-selections

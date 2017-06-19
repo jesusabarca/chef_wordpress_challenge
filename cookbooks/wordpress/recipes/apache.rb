@@ -1,8 +1,6 @@
 #
 # Cookbook:: wordpress
-# Recipe:: default
+# Recipe:: apache
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
-
-include_recipe '::mysql'
-include_recipe '::apache'
+package 'apache2'
